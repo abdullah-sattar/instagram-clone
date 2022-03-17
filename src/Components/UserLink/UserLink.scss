@@ -1,0 +1,14 @@
+.userLink {
+  display: flex;
+  > img {
+    display: block;
+    width: 110px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+}

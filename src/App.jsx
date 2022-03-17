@@ -7,8 +7,8 @@ import NavBar from './Components/NavBar/NavBar';
 import UserList from './Components/UserList/UserList';
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState();
-  const [user, setUser] = useState();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [user, setUser] = useState([]);
 
   const handleInput = (e) => {
     setSearchTerm(e.target.value);
@@ -17,7 +17,6 @@ const App = () => {
   useEffect(() => {
     setUser(users.filter(user => {return user.name.includes(searchTerm)}));
   }, [searchTerm])
-  
 
   return (
     <Router> 
