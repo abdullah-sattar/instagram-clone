@@ -2,22 +2,28 @@ import './App.scss';
 import users from "./data/data";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserProfile from './Components/UserProfile/UserProfile';
-import { useState } from 'react/cjs/react.production.min';
+import { useState, useEffect } from 'react';
 import NavBar from './Components/NavBar/NavBar';
 import UserList from './Components/UserList/UserList';
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState();
+  const [user, setUser] = useState();
 
   const handleInput = (e) => {
     setSearchTerm(e.target.value);
   }
+  
+  useEffect(() => {
+    setUser(users.filter(user => {return user.name.includes(searchTerm)}));
+  }, [searchTerm])
+  
 
   return (
     <Router> 
-      <NavBar searchTerm={searchTerm} handleInput={handleInput}/>
+      <NavBar handleInput={handleInput}/>
       <Routes>
-        <Route path="/" element={<UserList searchTerm={searchTerm}/>}/>
+        <Route path="/" element={<UserList user={user}/>}/>
         <Route path="/:name" element={<UserProfile users={users}/>}/>
       </Routes>
     </Router>

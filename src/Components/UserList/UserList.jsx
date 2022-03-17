@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import UserLink from "../UserLink/UserLink";
 
-const UserList = () => {
-  return (
-    <div>UserList</div>
-  )
-}
+const UserList = (props) => {
+  const { user } = props;
 
-export default UserList
+ 
+  return <div> {user.map((user) => {
+    return <UserLink name={user.name} title={user.title} />
+  })}
+</div>;
+};
+
+export default UserList;
