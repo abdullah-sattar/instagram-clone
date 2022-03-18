@@ -4,11 +4,14 @@ import { useEffect, useState } from "react";
 import UserBio from "../UserBio/UserBio";
 import UserStats from "../UserStats/UserStats";
 import UserImages from "../UserImages/UserImages";
+import UserHighlights from "../UserHighlights/UserHighlights";
 
 const UserProfile = (props) => {
   const { users } = props;
-  const { name } = useParams;
+  const { name } = useParams();
   const [userData, setUserData] = useState([]);
+
+  console.log(name)
 
   useEffect(() => {
     setUserData(
@@ -17,6 +20,8 @@ const UserProfile = (props) => {
       })
     );
   }, [name, users]);
+
+  console.log(userData)
 
   return (
     <div>
@@ -33,6 +38,7 @@ const UserProfile = (props) => {
               followers={data.followers}
               following={data.following}
             />
+            <UserHighlights highlights={data.highlights}/>
             <UserImages images={data.images} />
           </div>
         );

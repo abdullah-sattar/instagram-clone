@@ -10,13 +10,17 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [user, setUser] = useState([]);
 
+  useEffect(() => {
+    setUser(users.filter(user => {return user.name.includes(searchTerm)}));
+  }, [searchTerm])
+  
   const handleInput = (e) => {
     setSearchTerm(e.target.value);
   }
   
-  useEffect(() => {
-    setUser(users.filter(user => {return user.name.includes(searchTerm)}));
-  }, [searchTerm])
+  // useEffect(() => {
+    
+  // }, [searchTerm])
 
   return (
     <Router> 

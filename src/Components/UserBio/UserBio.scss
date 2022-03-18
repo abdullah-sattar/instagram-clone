@@ -1,0 +1,26 @@
+.profile-container {
+  display: flex;
+  >img {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  > .btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.bio-container {
+  display: flex;
+  flex-direction: column;
+  .bio__info--visible {
+      margin: 0px 5px;
+  }
+  .bio__info--hidden {
+      display: none;
+      height: 0;
+  }
+}

@@ -1,7 +1,14 @@
 .nav {
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  &__menu {
     display: flex;
-    border-bottom: 1px solid #DBDBDB;
-    &__menu {
-        display: flex;
+    .profile_pic {
+      display: block;
+      width: 30px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;
     }
+  }
 }

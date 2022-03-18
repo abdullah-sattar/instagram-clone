@@ -1,14 +1,18 @@
-.userLink {
-  display: flex;
-  > img {
-    display: block;
-    width: 110px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  &__info {
+.link {
+  list-style: none;
+  text-decoration: none;
+  .userLink {
     display: flex;
-    flex-direction: column;
+    > img {
+      display: block;
+      width: 6rem;
+      height: 6rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
