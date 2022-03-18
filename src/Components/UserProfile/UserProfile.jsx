@@ -5,6 +5,7 @@ import UserBio from "../UserBio/UserBio";
 import UserStats from "../UserStats/UserStats";
 import UserImages from "../UserImages/UserImages";
 import UserHighlights from "../UserHighlights/UserHighlights";
+import ImgMenu from "../ImgMenu/ImgMenu";
 
 const UserProfile = (props) => {
   const { users } = props;
@@ -39,6 +40,7 @@ const UserProfile = (props) => {
               following={data.following}
             />
             <UserHighlights highlights={data.highlights}/>
+            <ImgMenu />
             <UserImages images={data.images} />
           </div>
         );

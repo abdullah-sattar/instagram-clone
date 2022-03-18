@@ -12,11 +12,11 @@ const users = [
     },
     highlights: {
       highlight_1: {
-        img: "./images/khabib_highlight_1.webp",
+        img: "https://i.guim.co.uk/img/media/f3bdf6cbc92c55043b702993f892c11428769b83/0_362_5032_3020/master/5032.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=156607089c366966d83272bf6252d433",
         title: "Fights",
       },
       highlight_2: {
-        img: "./images/khabib_highlight_2.webp",
+        img: "https://i2-prod.walesonline.co.uk/incoming/article22178510.ece/ALTERNATES/s615b/0_EGR_161121_FatHippoBurgers_04.jpg",
         title: "Food",
       },
     },
