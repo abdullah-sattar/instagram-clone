@@ -1,9 +1,12 @@
 .stats {
     display: flex;
     justify-content: space-around;
+    border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    padding: 20px;
+    margin: 10px 0;
     &__wrapper {
         text-align: center;
-        margin: 5px 2rem;
         p {
             margin: 0;
         }

@@ -1,12 +1,16 @@
 .nav {
   display: flex;
   border-bottom: 1px solid #dbdbdb;
+  background-color: white;
+  justify-content: space-around;
+  padding: 20px;
   &__menu {
     display: flex;
+    gap: 20px;
     .profile_pic {
       display: block;
-      width: 30px;
-      height: auto;
+      width: 1.7rem;
+      height: 1.7rem;
       object-fit: cover;
       border-radius: 50%;
     }

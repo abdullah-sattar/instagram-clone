@@ -1,7 +1,10 @@
 .highlights {
   display: flex;
+  justify-content: flex-start;
+  padding: 20px;
   &__wrapper {
     text-align: center;
+    margin: 0px 20px;
     img {
       display: block;
       width: 6rem;
