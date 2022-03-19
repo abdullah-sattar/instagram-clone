@@ -1,10 +1,12 @@
 .imgs {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 7%;
     img {
-        display: block;
-      width: 25rem;
-      height: 25rem;
-      object-fit: cover;
-    }
+    display: block;
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    padding: 10px;
+  }
 }

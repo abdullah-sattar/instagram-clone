@@ -40,7 +40,7 @@ const UserProfile = (props) => {
               following={data.following}
             />
             <UserHighlights highlights={data.highlights}/>
-            <ImgMenu />
+            <ImgMenu name={name}/>
             <UserImages images={data.images} />
           </div>
         );

@@ -1,0 +1,14 @@
+.stats {
+    display: flex;
+    justify-content: space-around;
+    &__wrapper {
+        text-align: center;
+        margin: 5px 2rem;
+        p {
+            margin: 0;
+        }
+        .stats__stat {
+            font-weight: bold;
+        }
+    }
+}
