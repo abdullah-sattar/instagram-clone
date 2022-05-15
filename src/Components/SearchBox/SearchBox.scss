@@ -1,4 +1,9 @@
 .searchBox {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .searchBox {
     background-color: #EFEFEF;
     border-radius: 10px;
     padding: 10px;
@@ -7,4 +12,5 @@
         background-color: #EFEFEF;
         border: none;
     }
+}
 }
