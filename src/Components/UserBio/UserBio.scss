@@ -23,7 +23,11 @@
   > .btn-container {
     display: flex;
     align-items: center;
-    >.follow__btn {
+    > h1 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    > .follow__btn {
       color: white;
       background-color: #3898e5;
       border-color: #3898e5;
@@ -31,7 +35,7 @@
       padding: 5px 20px;
       border-radius: 5px;
     }
-    >.menu__btn {
+    > .menu__btn {
       color: white;
       background-color: #3898e5;
       border-color: #3898e5;
