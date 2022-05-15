@@ -29,22 +29,22 @@ const UserBio = (props) => {
   return (
     <div>
       <div className="profile-container">
-        <img src={pic} alt="profile-pic" />
+        <div className="bio-container">
+          <img src={pic} alt="profile-pic" />
+          <p className={`bio__info--${showTitle(bio)}`}>{bio.title}</p>
+          <p className={`bio__info--${showSubTitle(bio)}`}>{bio.subtitle}</p>
+          {textLines}
+          <a href={bio.href}>
+            <p className={`bio__info--${showLink(bio)}`}>{bio.link}</p>
+          </a>
+        </div>
         <div className="btn-container">
           <h1>{name}</h1>
-          <button>Follow</button>
-          <button>
+          <button className="follow__btn">Follow</button>
+          <button className="menu__btn">
             <FontAwesomeIcon icon={faChevronDown} />
           </button>
         </div>
-      </div>
-      <div className="bio-container">
-        <p className={`bio__info--${showTitle(bio)}`}>{bio.title}</p>
-        <p className={`bio__info--${showSubTitle(bio)}`}>{bio.subtitle}</p>
-        {textLines}
-        <a href={bio.href}>
-          <p className={`bio__info--${showLink(bio)}`}>{bio.link}</p>
-        </a>
       </div>
     </div>
   );
