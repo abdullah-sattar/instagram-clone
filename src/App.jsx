@@ -26,7 +26,7 @@ const App = () => {
     <Router> 
       <NavBar handleInput={handleInput}/>
       <Routes>
-        <Route path="/" element={<UserList user={user}/>}/>
+        <Route path="/instagram-clone" element={<UserList user={user}/>}/>
         <Route path="/:name" element={<UserProfile users={users}/>}/>
       </Routes>
     </Router>
