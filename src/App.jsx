@@ -1,6 +1,6 @@
 import './App.scss';
 import users from "./data/data";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {HashRouter, BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserProfile from './Components/UserProfile/UserProfile';
 import { useState, useEffect } from 'react';
 import NavBar from './Components/NavBar/NavBar';
@@ -23,13 +23,13 @@ const App = () => {
   // }, [searchTerm])
 
   return (
-    <Router> 
+    <HashRouter> 
       <NavBar handleInput={handleInput}/>
       <Routes>
-        <Route path="/instagram-clone/" element={<UserList user={user}/>}/>
+        <Route path="/" element={<UserList user={user}/>}/>
         <Route path="/:name" element={<UserProfile users={users}/>}/>
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
